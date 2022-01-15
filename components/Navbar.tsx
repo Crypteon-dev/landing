@@ -3,7 +3,6 @@ import NextLink from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
-import { useNewsletterModalContext } from 'contexts/newsletter-modal.context';
 import { ScrollPositionEffectProps, useScrollPosition } from 'hooks/useScrollPosition';
 import { NavItems, SingleNavItem } from 'types';
 import { media } from 'utils/media';
@@ -77,9 +76,9 @@ export default function Navbar({ items }: NavbarProps) {
             <NavItem key={singleItem.href} {...singleItem} />
           ))}
         </NavItemList>
-        <ColorSwitcherContainer>
+        {/* <ColorSwitcherContainer>
           <ColorSwitcher />
-        </ColorSwitcherContainer>
+        </ColorSwitcherContainer> */}
         <HamburgerMenuWrapper>
           <HamburgerIcon aria-label="Toggle menu" onClick={toggle} />
         </HamburgerMenuWrapper>
